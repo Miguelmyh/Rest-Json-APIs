@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="<link"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous" />
+  </head>
+  <body>
+    <div>
+      <h1>Cupcakes</h1>
+      <ul>
+        {%for cup in cups%}
+        <li>
+          {{cup.flavor}} -
+          <button class="delete-cupcake" data-id="{{cup.id}}">X</button>
+        </li>
+        {%endfor%}
+      </ul>
+    </div>
+    <div>
+      <form>
+        <input type="text" name="flavor" placeholder="flavor" />
+        <input type="text" name="size" placeholder="size" />
+        <input type="text" name="rating" placeholder="rating" />
+        <input type="text" name="image" placeholder="image" />
+        <button>Submit</button>
+      </form>
+    </div>
+    <script src="/static/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </body>
+</html>
